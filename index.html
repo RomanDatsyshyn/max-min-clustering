@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
+    <meta charset="utf-8" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./maximing.js"></script>
+
+    <title>MAX-MIN | Lab7 - Datsyshyn Roman</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Лабораторна робота №7</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color:aliceblue"
+                >Виконав - Дацишин Роман</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <img
+              src="https://www.ukraine2030.org/universities/universities/img/pqmpu9.png"
+              alt="НУ ЛП"
+              class="img-fluid"
+              style="margin-top: 20px"
+            />
+          </div>
+          <div class="col-sm-10">
+            <h1>Методи та системи штучного інтелекту</h1>
+            <p class="lead">
+              MAX-MIN - Алгоритм максимінної віддалі
+            </p>
+            <div class="input-group input-group-lg">
+              <div class="input-group-prepend">
+                <span
+                  class="input-group-text bg-light"
+                  id="inputGroup-sizing-lg"
+                  >Вхідні координати:</span
+                >
+              </div>
+              <input
+                type="text"
+                id="points"
+                value="-7,5,-6,6,-5,5,-6,3,3,3,6,3,9,3,6,1,4,-3,3,-6,5,0,7,-4,6,-6"
+                class="form-control"
+                aria-label="Sizing example input"
+                aria-describedby="inputGroup-sizing-lg"
+              />
+              <button
+                type="button"
+                onclick="start()"
+                class="btn btn-success btn-lg"
+              >
+                Кластеризувати
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="content demo">
+      <div id="large-header" class="large-header">
+        <canvas id="demo-canvas"></canvas>
+        <h1 class="main-title"><span class="thin">MAX-MIN</span></h1>
+      </div>
+    </div>
+
+    <section class="py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2>Результати виконання графічно:</h2>
+            <div id="container" style="width: 100%; height: 550px"></div>
+          </div>
+          <div class="col">
+            <h2>Розрахунки:</h2>
+            <p id="math"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-3 alert-dark">
+      <div class="container">
+        <p class="m-0 text-center ">
+          &copy; DRV 2019
+        </p>
+      </div>
+    </footer>
+
+    <!-- partial -->
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
